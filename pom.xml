@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>finedatalink</artifactId>
+        <groupId>com.fr.intelligence</groupId>
+        <version>2022.6</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>fdl-plugin-demo</artifactId>
+    <packaging>pom</packaging>
+
+    <properties>
+        <plugin.id>com.fr.plugin.dp.demo</plugin.id>
+        <plugin.version>1.0</plugin.version>
+        <pluginOutputPath>${plugins.dir}/plugin-${plugin.id}-${plugin.version}</pluginOutputPath>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.fr.intelligence</groupId>
+            <artifactId>dp-base</artifactId>
+            <version>${fdl.version}</version>
+        </dependency>
+        <!--fdl dependencies-->
+        <dependency>
+            <groupId>com.fr.intelligence</groupId>
+            <artifactId>fdl-spi</artifactId>
+            <version>${fdl.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fr.intelligence</groupId>
+            <artifactId>fdl-plugin</artifactId>
+            <version>${fdl.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <directory>${pluginOutputPath}</directory>
+        <outputDirectory>${pluginOutputPath}/classes</outputDirectory>
+    </build>
+</project>
