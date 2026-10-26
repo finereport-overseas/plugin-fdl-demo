@@ -2,5 +2,8 @@
 .idea/
 *.iml
 env/
+!env/WEB-INF/
+!env/WEB-INF/classes/
+!env/WEB-INF/classes/conf/
 hadoop/
 build/
